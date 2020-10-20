@@ -4,7 +4,7 @@
 
 
 
-[![Design Preview of Article component](https://i.postimg.cc/wv1qZBbj/desktop-preview.jpg)](https://postimg.cc/5YMWFfVh)
+[![Design Preview of Article component](https://i.postimg.cc/wv1qZBbj/desktop-preview.jpg)](https://article-component.joyshaheb.vercel.app/)
 
 ## Welcome! 👋
 
