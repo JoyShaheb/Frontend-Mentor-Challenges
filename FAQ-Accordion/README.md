@@ -1,6 +1,10 @@
 # Frontend Mentor - FAQ Accordion Card X
 
-![Design preview for the FAQ Accordion Card coding challenge](./design/desktop-preview.jpg)
+## [Click here to see Live Website 🚀](https://faq-accordion.joyshaheb.vercel.app/)
+
+
+[![Design Preview of FAQ-Accordion](https://i.postimg.cc/g2KTk78m/desktop-preview.jpg)](https://faq-accordion.joyshaheb.vercel.app/)
+
 
 ## Welcome! 👋
 
