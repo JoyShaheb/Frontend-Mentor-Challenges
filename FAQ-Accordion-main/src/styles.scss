@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+//**********    Background gradient   *******************
+$Soft_violet: hsl(273, 75%, 66%);
+$Soft_blue: hsl(240, 73%, 65%);
+
+//********     Text      *********************
+
+$Very_dark_desaturated_blue: hsl(238, 29%, 16%);
+$Soft_red: hsl(14, 88%, 65%);
+
+$Very_dark_grayish_blue: hsl(237, 12%, 33%);
+$Dark_grayish_blue: hsl(240, 6%, 50%);
+
+// ********** Divider *************
+
+$Light_grayish_blue: hsl(240, 5%, 91%);
+$font-size : 15px;
+
+//*****   Template for Css Flexbox Model  *******
+
+@mixin flex($dir, $jus, $ali){
+display: flex;
+flex-direction: $dir;
+justify-content: $jus;
+align-items: $ali;
+}
+
+*{
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+body{
+  @include flex(null, center,center);
+  width: 100%;
+  min-height: 100vh;
+  background: rgb(137,190,71);
+  background: linear-gradient(180deg, $Soft_violet 50%, $Soft_blue 100%);
+  font-family: 'Kumbh Sans';
+  font-size: $font-size;
+}
+}
+
+
+
+// Scale measures for illustrations/SVG on various breakpoints....
+$scale-1: 1;
+$scale-2: 0.8;
+$scale-3: 0.65;
+$scale-4: 1.3;
+$scale-5:0.5;
+
+// Collection of all used breakpoints.............
+// The SVG is difficult to work with, that's why i have to use odd breakpoint numbers
+$breakpoint-0: 1300px;       // desktop
+$breakpoint-1: 1023px;      // laptop
+$breakpoint-2: 824px;      // tablet
+$breakpoint-3: 649px;     //  phone
+
+
+// Conditional Media Query Mixin 
+// Learned this from https://css-tricks.com/conditional-media-query-mixins/
+
+
+@mixin media-template ($bpCondition){
+  @if $bpCondition == desktop {
+    @media (min-width:$breakpoint-0){ @content }
+  };
+  @if $bpCondition == laptop {
+    @media (max-width:$breakpoint-1){ @content }
+  };
+  @if $bpCondition == tablet {
+    @media (max-width:$breakpoint-2){ @content }
+  };
+  @if $bpCondition == phone {
+    @media (max-width:$breakpoint-3){ @content }
+  }
+}
+
+
+
+// Collection of all the commonly repeated codes........
+
+@mixin solution($index,$position,$top,$left,$transform){
+    z-index: $index;
+    position:$position;
+    top:$top;
+    left:$left;
+    transform: translate(-50%,-50%) scale($transform);
+}
+
+
+.container{
+  @include flex(row,null, null);
+  flex-wrap: wrap;
+  width:80vw;
+  height:70vh;
+  background-color: #fff;
+  border-radius: 15px;
+  @include media-template(phone){
+    margin-top: 80px;
+    height: 80vh;
+  }
+}
+
+// ******    Style Rules for Left.js **********
+
+
+.image{ 
+  position: relative;
+  width: 50%;
+  height: 100%;
+  @include media-template(phone){
+    width: 100%;
+    height: 20%;
+  }
+
+
+  .box{
+    @include solution(2, absolute, 58%,0px,$scale-1);
+
+    
+    @include media-template(desktop){
+      @include solution(2, absolute, 59%,0px,$scale-4);
+    }
+    @include media-template(laptop){
+      @include solution(2, absolute, 57%,0px,$scale-2);
+    }
+    @include media-template(tablet){
+      @include solution(2, absolute, 54%,0px,$scale-3);
+    }
+    @include media-template(phone){
+      @include solution(2, absolute, 15%,20%,$scale-5);
+    }
+
+
+  }
+  .board{
+    @include solution(1, absolute, 50%,172px,$scale-1);
+    clip-path: inset(0 0 0 64px);
+
+
+    @include media-template(desktop){
+      @include solution(1, absolute, 50%,223px,$scale-4);      
+    }
+    @include media-template(laptop){
+      @include solution(1, absolute, 50%,137px,$scale-2);      
+    }
+    @include media-template(tablet){
+      @include solution(1, absolute, 50%,111px,$scale-3);
+    }
+    @include media-template(phone){
+      @include solution(1, absolute, 0%, 50%, $scale-5);
+      clip-path: inset(0 0 0 0);
+
+    }
+
+  }
+
+
+  .pattern{
+    @include solution(0, absolute, 50%,150px,$scale-1/2);
+
+
+    @include media-template(desktop){
+      @include solution(0, absolute, 50%,200px,$scale-4/2);          
+    }
+    @include media-template(laptop){
+      @include solution(0, absolute, 50%,120px,$scale-2/2);     
+    }
+    @include media-template(tablet){
+      @include solution(0, absolute, 50%,100px,$scale-3/2);
+    }
+    @include media-template(phone){
+      @include solution(0, absolute, 0px,50%,$scale-5/2);
+    }
+  }
+
+}
+
+
+
+
+
+
+// ******    Style Rules for FAQ.js **********
+
+
+
+
+
+.wrapper{
+  width: 50%;
+  height: 100%;
+
+  @include flex(column, center,center);
+  @include media-template(phone){
+    width: 100%;
+    height: 80%;
+    font-size: 14px;
+  }
+
+  .container-accordion{
+    padding: 0 20% 0 5%;
+    @include media-template(phone){
+      padding: 0 10%;
+      h1{
+        text-align: center;
+      }
+    }
+    h1{
+      padding: 20px 0;
+    }
+  }
+
+  .accordion{
+    @include flex(null,space-between,null);
+    padding: 10px 0;
+    border-bottom: 2px solid $Light_grayish_blue;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    &:hover{
+    font-weight: 700;      
+    }
+
+  }
+  .panel{
+    max-height: 0px;
+    overflow:hidden;
+    transition: all .5s ease;
+    p{
+      padding: 10px 0;
+    }
+  }
+}
+
+// Toggle Switch On & Off, turned on when accordion is clicked
+.open{
+  font-weight: 700;  
+}
