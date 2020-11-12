@@ -1,4 +1,4 @@
-# Frontend Mentor - FAQ Accordion Card
+# Frontend Mentor - FAQ Accordion Card X
 
 ![Design preview for the FAQ Accordion Card coding challenge](./design/desktop-preview.jpg)
 
