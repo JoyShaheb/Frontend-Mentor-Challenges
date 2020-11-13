@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+
+$breakpoint-1: 375px;  //Mobile
+$breakpoint-2: 1440px; //desktop
+
+
+$font-size: 18px;
+
+
+// ### Primary Colors
+
+$Dark_Blue: hsl(240, 38%, 20%);
+$Grayish_Blue: hsl(240, 18%, 77%);
+
+@mixin flex($dir,$jus,$ali){
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $jus;
+  align-items: $ali;
+}
+
+
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  body{
+    background: url('./images/pattern-bg.svg') no-repeat top left;
+    // @include flex(null,center,center);
+    // width: 100%;
+    // min-height: 100vh;
+    font-family: 'Inter';
+    font-size: $font-size;
+  }
+}
+
+
+.container{
+  width: 70vw;
+  height: 60vh;
+  // background-color: red;
+}
