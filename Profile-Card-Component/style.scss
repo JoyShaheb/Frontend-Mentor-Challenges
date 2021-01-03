@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
+
+
+
+
+
+
+$bp : (
+  mobile: 375px,
+  desktop: 1440px,
+);
+
+
+// ### Primary Color
+
+$Dark-cyan: hsl(185, 75%, 39%);
+$Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+$Dark-grayish-blue: hsl(227, 10%, 46%);
+
+// ### Neutral Color
+
+$Dark-gray: hsl(0, 0%, 59%);
+
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  body{
+    font-family: 'Kumbh Sans';
+  }
+}
+
