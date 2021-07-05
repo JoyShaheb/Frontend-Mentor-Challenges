@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* body {
+  font-family: "Lexend Deca", sans-serif;
+  color: rgba(255, 255, 255, 0.75);
+  background-color: #f2f2f2;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  padding: 0 7vw;
+}
+
+[class^="box-"] {
+  height: 65vh;
+  display: -ms-grid;
+  display: grid;
+  padding: 2.2vw;
+}
+
+.box-1 {
+  background-color: #e38826;
+  border-radius: 10px 0 0 10px;
+}
+
+.box-2 {
+  background-color: #006970;
+}
+
+.box-3 {
+  background-color: #004241;
+  border-radius: 0 10px 10px 0;
+}
+
+[class^="icon-"] {
+  height: 65px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.icon-1 {
+  background-image: url("../images/icon-sedans.svg");
+}
+
+.icon-2 {
+  background-image: url("../images/icon-suvs.svg");
+}
+
+.icon-3 {
+  background-image: url("../images/icon-luxury.svg");
+}
+
+.header {
+  font-size: 45px;
+  color: #f2f2f2;
+  text-transform: uppercase;
+}
+
+.text, [class^="button-"] {
+  font-size: 20px;
+}
+
+[class^="button-"] {
+  background-color: #fff;
+  justify-self: flex-start;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding: 8px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+  border: 3px solid white;
+}
+
+[class^="button-"]:hover {
+  background-color: inherit;
+  color: #f2f2f2;
+}
+
+.button-1 {
+  color: #e38826;
+}
+
+.button-2 {
+  color: #006970;
+}
+
+.button-3 {
+  color: #004241;
+}
+
+@media (max-width: 425px) {
+  .header {
+    font-size: 38px;
+  }
+  .text, [class^="button-"] {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 40px 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  [class^="box-"] {
+    height: 55vh;
+    padding: 30px;
+  }
+  .box-1 {
+    border-radius: 10px 10px 0 0;
+  }
+  .box-3 {
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    height: 100vh;
+    padding: 0 7vw;
+  }
+  [class^="box-"] {
+    height: 65vh;
+    padding: 2.2vw;
+  }
+  [class^="icon-"] {
+    height: 6vw;
+  }
+  .header {
+    font-size: 4.4vw;
+  }
+  .text, [class^="button-"] {
+    font-size: 1.7vw;
+  }
+  [class^="button-"] {
+    padding: 0.45vw 1.8vw;
+    border-radius: 0.8vw;
+    border: 0.2vw solid white;
+  }
+}
+/*# sourceMappingURL=style.css.map */
