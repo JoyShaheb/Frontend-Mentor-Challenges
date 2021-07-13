@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+html {
+  font-size: 15px;
+}
+
+@media (min-width: 1250px) {
+  html {
+    font-size: 1.2vw;
+  }
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* body {
+  font-family: "Lexend Deca";
+  color: rgba(255, 255, 255, 0.75);
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  width: 80vw;
+  height: 65vh;
+}
+
+.card-1 {
+  background-color: #e38826;
+}
+
+.card-1 .btn {
+  color: #e38826;
+}
+
+.card-2 {
+  background-color: #006970;
+}
+
+.card-2 .btn {
+  color: #006970;
+}
+
+.card-3 {
+  background-color: #004241;
+}
+
+.card-3 .btn {
+  color: #004241;
+}
+
+[class^="card-"] {
+  padding: 8%;
+  display: -ms-grid;
+  display: grid;
+  gap: 0rem;
+}
+
+.card-1 {
+  border-radius: 0.625rem 0 0 0.625rem;
+}
+
+.card-3 {
+  border-radius: 0 0.625rem 0.625rem 0;
+}
+
+.icon img {
+  width: 7.5rem;
+}
+
+.title {
+  font-family: "Big Shoulders Display";
+  color: #f2f2f2;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+.text, .btn {
+  font-size: 1.125rem;
+}
+
+.btn {
+  justify-self: flex-start;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  background-color: #f2f2f2;
+  border: 0.1875rem solid #f2f2f2;
+  border-radius: 0.625rem;
+  cursor: pointer;
+  padding: 0.625rem 0.9375rem;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: inherit;
+}
+
+@media (max-width: 850px) {
+  .container {
+    -ms-grid-columns: inherit;
+        grid-template-columns: inherit;
+    height: inherit;
+  }
+  [class^="card-"] {
+    padding: 5%;
+    gap: 1.25rem;
+  }
+  .card-1 {
+    border-radius: 0.625rem 0.625rem 0 0;
+    margin-top: 1.875rem;
+  }
+  .card-3 {
+    border-radius: 0 0 0.625rem 0.625rem;
+  }
+}
+
+@media (max-width: 425px) {
+  html {
+    font-size: 14.5px;
+  }
+  [class^="card-"] {
+    gap: 1.5625rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

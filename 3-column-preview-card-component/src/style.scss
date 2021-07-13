@@ -1,0 +1,134 @@
+// ## Fonts
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+// ## Colors
+
+// ### Primary
+
+$primary: (
+  Bright-orange: hsl(31, 77%, 52%),
+  Dark-cyan: hsl(184, 100%, 22%),
+  Very-dark-cyan: hsl(179, 100%, 13%),
+);
+$Bright-orange: hsl(31, 77%, 52%);
+$Dark-cyan: hsl(184, 100%, 22%);
+$Very-dark-cyan: hsl(179, 100%, 13%);
+
+// ### Neutral
+
+$Transparent-white: hsla(0, 0%, 100%, 0.75); // (paragraphs)
+$Very-light-gray: hsl(0, 0%, 95%); // (background, headings, buttons)
+
+html {
+  font-size: 15px;
+  @media (min-width: 1250px) {
+    font-size: 1.2vw;
+  }
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  body {
+    font-family: "Lexend Deca";
+    color: $Transparent-white;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 80vw;
+  height: 65vh;
+}
+
+// Looping colors in .card-* & .btn-*
+$i: 1;
+@each $key, $value in $primary {
+  .card-#{$i} {
+    background-color: $value;
+    .btn {
+      color: $value;
+    }
+  }
+  $i: $i + 1;
+}
+
+[class^="card-"] {
+  padding: 8%;
+  display: grid;
+  gap: 0rem;
+}
+
+.card-1 {
+  border-radius: 0.625rem 0 0 0.625rem;
+}
+.card-3 {
+  border-radius: 0 0.625rem 0.625rem 0;
+}
+
+.icon {
+  img {
+    width: 7.5rem;
+  }
+}
+
+.title {
+  font-family: "Big Shoulders Display";
+  color: $Very-light-gray;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+.text {
+  font-size: 1.125rem;
+}
+
+.btn {
+  @extend .text;
+  justify-self: flex-start;
+  align-self: flex-end;
+  background-color: $Very-light-gray;
+  border: 0.1875rem solid $Very-light-gray;
+  border-radius: 0.625rem;
+  cursor: pointer;
+  padding: 0.625rem 0.9375rem;
+  transition: all 0.15s ease;
+  &:hover {
+    background-color: transparent;
+    color: inherit;
+  }
+}
+
+// ### Media Queries
+
+@media (max-width: 850px) {
+  .container {
+    grid-template-columns: inherit;
+    height: inherit;
+  }
+  [class^="card-"] {
+    padding: 5%;
+    gap: 1.25rem;
+  }
+  .card-1 {
+    border-radius: 0.625rem 0.625rem 0 0;
+    margin-top: 1.875rem;
+  }
+  .card-3 {
+    border-radius: 0 0 0.625rem 0.625rem;
+  }
+}
+
+@media (max-width: 425px) {
+  html {
+    font-size: 14.5px;
+  }
+  [class^="card-"] {
+    gap: 1.5625rem;
+  }
+}
