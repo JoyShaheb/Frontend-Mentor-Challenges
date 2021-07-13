@@ -1,9 +1,7 @@
 // ## Fonts
 @import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
 
-// ## Colors
-
-// ### Primary
+// ### Primary Colors
 
 $primary: (
   Bright-orange: hsl(31, 77%, 52%),
@@ -11,7 +9,7 @@ $primary: (
   Very-dark-cyan: hsl(179, 100%, 13%),
 );
 
-// ### Neutral
+// ### Neutral Colors
 
 $Transparent-white: hsla(0, 0%, 100%, 0.75); // (paragraphs)
 $Very-light-gray: hsl(0, 0%, 95%); // (background, headings, buttons)
