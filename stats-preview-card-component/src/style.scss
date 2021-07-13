@@ -1,178 +1,128 @@
 // ### Fonts
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
 
-// ## Colors
-
-// ### Primary
+// ### Primary Colors
 
 $Very-dark-blue: hsl(233, 47%, 7%); // (main background)
 $Dark-desaturated-blue: hsl(244, 38%, 16%); // (card background)
 $Soft-violet: hsl(277, 64%, 61%); // (accent)
 
-// ### Neutral
+// ### Neutral Colors
 
-$White: hsl(0, 0%, 100%); // (main heading, stats)
+$White: hsl(0, 0%, 100%); //  (main heading, stats)
 $Slightly-transparent-white: hsla(0, 0%, 100%, 0.75); // (main paragraph)
 $Slightly-transparent-white: hsla(0, 0%, 100%, 0.6); // (stat headings)
 
-// ####  variables map
-
-$heading-size: (
-  "large": 3.25vw,
-  "medium": 38px,
-  "small": 30px,
-);
-
-$text-size: (
-  "large": 1.8vw,
-  "medium": 21px,
-  "small": 18px,
-);
-
-$stats-size: (
-  "large": 1.2vw,
-  "medium": 15px,
-  "small": 12px,
-);
-$number-size: (
-  "large": 2.8vw,
-  "medium": 35px,
-  "small": 28px,
-);
+html {
+  font-size: 16px;
+  @media (min-width: 1250px) {
+    font-size: 1.5vw;
+  }
+}
 
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
   body {
-    font-family: "Lexend Deca", sans-serif;
-    background-color: $Very-dark-blue;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-family: "Lexend Deca", sans-serif; // 400
     color: $Slightly-transparent-white;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    background-color: $Very-dark-blue;
   }
 }
 
-.font-inter,
-.number {
-  font-family: "Inter", sans-serif;
-  color: $White;
-  font-weight: 700;
+.purple {
+  color: $Soft-violet;
 }
 
 .container {
-  border-radius: 10px;
-  width: 80vw;
-  height: 70vh;
-  background-color: $Dark-desaturated-blue;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  .text {
+  grid-template-columns: 1.2fr 1fr;
+  width: 80vw;
+  height: 65vh;
+  border-radius: 0.9375rem;
+  background-color: $Dark-desaturated-blue;
+}
+
+.text {
+  padding: 8%;
+  display: grid;
+  &__heading {
+    font-family: "Inter", sans-serif; // 400,700
+    font-weight: 700;
+    color: $White;
+    font-size: 2.1875rem;
+  }
+  &__description {
+    font-size: 1.25rem;
+  }
+  &__stats {
+    align-self: flex-end;
     display: grid;
-    place-content: center;
-    padding: 8%;
-    gap: 5%;
-    &__title {
-      font-size: map-get($heading-size, medium);
-
-      &-highlight {
-        color: $Soft-violet;
-      }
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    .number {
+      font-size: 2.1rem;
+      font-weight: 700;
+      color: $White;
     }
-    &__paragraph {
-      font-size: map-get($text-size, medium);
-    }
-    &__stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-
-      [class^="text__stats-"] {
-        font-size: map-get($stats-size, medium);
-        text-transform: uppercase;
-      }
-      .number {
-        font-size: map-get($number-size, medium);
-      }
-    }
-  }
-  .image {
-    background: url("../images/image-header-desktop.jpg"), $Soft-violet;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: multiply;
-    border-radius: 0px 10px 10px 0px;
-  }
-}
-
-//  #### media Queries
-
-@media (max-width: 450px) {
-  .container {
-    width: 95vw;
-    .text {
-      gap: 10px;
-      &__title {
-        font-size: map-get($heading-size, small);
-      }
-      &__paragraph {
-        font-size: map-get($text-size, small);
-      }
-      &__stats {
-        [class^="text__stats-"] {
-          font-size: map-get($stats-size, small);
-        }
-        .number {
-          font-size: map-get($number-size, small);
-        }
-      }
+    .stat-text {
+      padding: 0;
+      font-size: 0.975rem;
+      text-transform: uppercase;
     }
   }
 }
 
-@media (max-width: 1000px) {
+.image {
+  background-image: url("../images/image-header-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 0.9375rem 0.9375rem 0;
+}
+
+// ### Media Queries
+
+@media (max-width: 900px) {
   body {
+    height: inherit;
   }
   .container {
-    text-align: center;
-    grid-template-columns: 1fr;
+    margin: 2.1875rem 0;
+    grid-template-columns: inherit;
+    grid-template-rows: 0.7fr 1fr;
+    height: inherit;
     .text {
-      height: 90vh;
+      padding: 6%;
+      gap: 1.875rem;
       order: 1;
       &__stats {
-        grid-template-columns: 1fr;
-        gap: 30px;
+        text-align: center;
+        justify-content: center;
+        grid-template-columns: inherit;
+        gap: 1.5625rem;
       }
     }
     .image {
-      height: 40vh;
       order: 0;
-      background-position: top;
-      border-radius: 10px 10px 0 0;
+      background-position: top center;
+      border-radius: 0.9375rem 0.9375rem 0 0;
     }
   }
 }
-
-@media (min-width: 1200px) {
+@media (max-width: 460px) {
+  html {
+    font-size: 14.5px;
+  }
   .container {
-    .text {
-      &__title {
-        font-size: map-get($heading-size, large);
-      }
-      &__paragraph {
-        font-size: map-get($text-size, large);
-      }
-      &__stats {
-        [class^="text__stats-"] {
-          font-size: map-get($stats-size, large);
-        }
-        .number {
-          font-size: map-get($number-size, large);
-        }
-      }
+    width: 90vw;
+    grid-template-rows: 0.4fr 1fr;
+    .image {
+      background-image: url("../images/image-header-mobile.jpg");
     }
   }
 }

@@ -107,6 +107,9 @@ html {
 }
 
 @media (max-width: 850px) {
+  body {
+    height: inherit;
+  }
   .container {
     -ms-grid-columns: inherit;
         grid-template-columns: inherit;
@@ -122,6 +125,7 @@ html {
   }
   .card-3 {
     border-radius: 0 0 0.625rem 0.625rem;
+    margin-bottom: 1.875rem;
   }
 }
 

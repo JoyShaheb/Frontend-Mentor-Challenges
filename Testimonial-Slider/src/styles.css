@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* body {
+  background: url("./images/pattern-bg.svg") no-repeat top left;
+  font-family: 'Inter';
+  font-size: 18px;
+}
+
+.container {
+  width: 70vw;
+  height: 60vh;
+}
+/*# sourceMappingURL=styles.css.map */

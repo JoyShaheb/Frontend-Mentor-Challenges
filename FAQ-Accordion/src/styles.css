@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background: #89be47;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #af67e9), to(#6565e7));
+  background: linear-gradient(180deg, #af67e9 50%, #6565e7 100%);
+  font-family: 'Kumbh Sans';
+  font-size: 15px;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 80vw;
+  height: 70vh;
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+@media (max-width: 649px) {
+  .container {
+    margin-top: 80px;
+    height: 80vh;
+  }
+}
+
+.image {
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+
+@media (max-width: 649px) {
+  .image {
+    width: 100%;
+    height: 20%;
+  }
+}
+
+.image .box {
+  z-index: 2;
+  position: absolute;
+  top: 58%;
+  left: 0px;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+}
+
+@media (min-width: 1300px) {
+  .image .box {
+    z-index: 2;
+    position: absolute;
+    top: 59%;
+    left: 0px;
+    -webkit-transform: translate(-50%, -50%) scale(1.3);
+            transform: translate(-50%, -50%) scale(1.3);
+  }
+}
+
+@media (max-width: 1023px) {
+  .image .box {
+    z-index: 2;
+    position: absolute;
+    top: 57%;
+    left: 0px;
+    -webkit-transform: translate(-50%, -50%) scale(0.8);
+            transform: translate(-50%, -50%) scale(0.8);
+  }
+}
+
+@media (max-width: 824px) {
+  .image .box {
+    z-index: 2;
+    position: absolute;
+    top: 54%;
+    left: 0px;
+    -webkit-transform: translate(-50%, -50%) scale(0.65);
+            transform: translate(-50%, -50%) scale(0.65);
+  }
+}
+
+@media (max-width: 649px) {
+  .image .box {
+    z-index: 2;
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    -webkit-transform: translate(-50%, -50%) scale(0.5);
+            transform: translate(-50%, -50%) scale(0.5);
+  }
+}
+
+.image .board {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 172px;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  -webkit-clip-path: inset(0 0 0 64px);
+          clip-path: inset(0 0 0 64px);
+}
+
+@media (min-width: 1300px) {
+  .image .board {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 223px;
+    -webkit-transform: translate(-50%, -50%) scale(1.3);
+            transform: translate(-50%, -50%) scale(1.3);
+  }
+}
+
+@media (max-width: 1023px) {
+  .image .board {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 137px;
+    -webkit-transform: translate(-50%, -50%) scale(0.8);
+            transform: translate(-50%, -50%) scale(0.8);
+  }
+}
+
+@media (max-width: 824px) {
+  .image .board {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 111px;
+    -webkit-transform: translate(-50%, -50%) scale(0.65);
+            transform: translate(-50%, -50%) scale(0.65);
+  }
+}
+
+@media (max-width: 649px) {
+  .image .board {
+    z-index: 1;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(0.5);
+            transform: translate(-50%, -50%) scale(0.5);
+    -webkit-clip-path: inset(0 0 0 0);
+            clip-path: inset(0 0 0 0);
+  }
+}
+
+.image .pattern {
+  z-index: 0;
+  position: absolute;
+  top: 50%;
+  left: 150px;
+  -webkit-transform: translate(-50%, -50%) scale(0.5);
+          transform: translate(-50%, -50%) scale(0.5);
+}
+
+@media (min-width: 1300px) {
+  .image .pattern {
+    z-index: 0;
+    position: absolute;
+    top: 50%;
+    left: 200px;
+    -webkit-transform: translate(-50%, -50%) scale(0.65);
+            transform: translate(-50%, -50%) scale(0.65);
+  }
+}
+
+@media (max-width: 1023px) {
+  .image .pattern {
+    z-index: 0;
+    position: absolute;
+    top: 50%;
+    left: 120px;
+    -webkit-transform: translate(-50%, -50%) scale(0.4);
+            transform: translate(-50%, -50%) scale(0.4);
+  }
+}
+
+@media (max-width: 824px) {
+  .image .pattern {
+    z-index: 0;
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    -webkit-transform: translate(-50%, -50%) scale(0.325);
+            transform: translate(-50%, -50%) scale(0.325);
+  }
+}
+
+@media (max-width: 649px) {
+  .image .pattern {
+    z-index: 0;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(0.25);
+            transform: translate(-50%, -50%) scale(0.25);
+  }
+}
+
+.wrapper {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 1300px) {
+  .wrapper {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .wrapper {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 649px) {
+  .wrapper {
+    width: 100%;
+    height: 80%;
+    font-size: 14px;
+  }
+}
+
+.wrapper .container-accordion {
+  padding: 0 20% 0 5%;
+}
+
+@media (max-width: 649px) {
+  .wrapper .container-accordion {
+    padding: 0 10%;
+  }
+  .wrapper .container-accordion h1 {
+    text-align: center;
+  }
+}
+
+.wrapper .container-accordion h1 {
+  padding: 0 0 10px 0;
+}
+
+.wrapper .accordion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 2px solid #e7e7e9;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.wrapper .accordion:hover {
+  font-weight: 700;
+}
+
+.wrapper .panel {
+  max-height: 0px;
+  overflow: hidden;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.wrapper .panel p {
+  padding: 10px 0;
+}
+
+.open {
+  font-weight: 700;
+}
+/*# sourceMappingURL=styles.css.map */
