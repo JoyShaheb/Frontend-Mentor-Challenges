@@ -78,7 +78,8 @@ html {
 }
 
 .image {
-  background-image: url("../images/image-header-desktop.jpg");
+  background: url("../images/image-header-desktop.jpg"), #aa5cdb;
+  background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
