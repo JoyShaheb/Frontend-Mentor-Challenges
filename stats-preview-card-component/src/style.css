@@ -93,6 +93,7 @@ html {
     height: inherit;
   }
   .container {
+    text-align: center;
     margin: 2.1875rem 0;
     -ms-grid-columns: inherit;
         grid-template-columns: inherit;
