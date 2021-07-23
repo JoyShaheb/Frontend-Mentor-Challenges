@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+html {
+  font-size: 15.5px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* body {
+  font-family: "Barlow Semi Condensed";
+  background-color: #ecf2f8;
+  width: 100%;
+  margin: 3.125rem 0;
+}
+
+.container {
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  width: 86vw;
+  gap: 1.875rem;
+      grid-template-areas: "c-1 c-1 c-1 c-1    c-2               c-5" "c-1 c-1 c-1 c-1    c-2               c-5" "c-1 c-1 c-1 c-1    c-2               c-5" "c-3                c-4 c-4 c-4 c-4   c-5";
+}
+
+.card-1 {
+  background-color: #7541c8;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: c-1;
+  border-radius: 0.625rem;
+  padding: 1.5625rem;
+  display: -ms-grid;
+  display: grid;
+  gap: 0.625rem;
+}
+
+.card-2 {
+  background-color: #48556a;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 5;
+  grid-area: c-2;
+  border-radius: 0.625rem;
+  padding: 1.5625rem;
+  display: -ms-grid;
+  display: grid;
+  gap: 0.625rem;
+}
+
+.card-3 {
+  background-color: white;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: c-3;
+  border-radius: 0.625rem;
+  padding: 1.5625rem;
+  display: -ms-grid;
+  display: grid;
+  gap: 0.625rem;
+}
+
+.card-4 {
+  background-color: #19212e;
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 4;
+  grid-area: c-4;
+  border-radius: 0.625rem;
+  padding: 1.5625rem;
+  display: -ms-grid;
+  display: grid;
+  gap: 0.625rem;
+}
+
+.card-5 {
+  background-color: white;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 4;
+  -ms-grid-column: 6;
+  grid-area: c-5;
+  border-radius: 0.625rem;
+  padding: 1.5625rem;
+  display: -ms-grid;
+  display: grid;
+  gap: 0.625rem;
+}
+
+.info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.25rem;
+}
+
+.info img {
+  width: 3.4375rem;
+  border-radius: 50%;
+  border: 0.125rem solid white;
+}
+
+.opinion-1 {
+  font-size: 1.1875rem;
+  font-weight: 600;
+}
+
+.opinion-2 {
+  font-size: 0.9063rem;
+}
+
+.text__name {
+  font-weight: 600;
+}
+
+.card-1,
+.card-2,
+.card-4 {
+  color: #cfcfcf;
+}
+
+.card-1 .opinion-1,
+.card-1 .text__name,
+.card-2 .opinion-1,
+.card-2 .text__name,
+.card-4 .opinion-1,
+.card-4 .text__name {
+  color: white;
+}
+
+.card-1 {
+  background-image: url("../images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: 80% 10%;
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 1.15vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    height: inherit;
+        grid-template-areas: "c-1" "c-1" "c-1" "c-2" "c-3" "c-4" "c-4" "c-4" "c-5";
+  }
+}
+/*# sourceMappingURL=style.css.map */

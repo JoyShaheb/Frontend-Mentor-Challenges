@@ -1,0 +1,131 @@
+// ### Fonts
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+//  Card-1 - danny
+//  Card-2 - Walters
+//  Card-3 - harmon
+//  Card-4 - patrick
+//  Card-5 - kira
+
+// ### Primary Colors
+
+$primary: (
+  Moderate-violet: hsl(263, 55%, 52%),
+  Very-dark-grayish-blue: hsl(217, 19%, 35%),
+  White-1: hsl(0, 0%, 100%),
+  Very-dark-blackish-blue: hsl(219, 29%, 14%),
+  White: hsl(0, 0%, 100%),
+);
+
+// ### Neutral Colors
+
+$Light-gray: hsl(0, 0%, 81%);
+$Light-grayish-blue: hsl(210, 46%, 95%);
+
+html {
+  font-size: 15.5px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  body {
+    font-family: "Barlow Semi Condensed";
+    background-color: $Light-grayish-blue;
+    width: 100%;
+    margin: 3.125rem 0;
+  }
+}
+
+.container {
+  margin: auto;
+  display: grid;
+  width: 86vw;
+  gap: 1.875rem;
+  grid-template-areas:
+    "c-1 c-1 c-1 c-1    c-2               c-5"
+    "c-1 c-1 c-1 c-1    c-2               c-5"
+    "c-1 c-1 c-1 c-1    c-2               c-5"
+    "c-3                c-4 c-4 c-4 c-4   c-5";
+}
+
+// Looping through the .card-* classes to save time.
+
+$i: 1;
+@each $key, $value in $primary {
+  .card-#{$i} {
+    background-color: $value;
+    grid-area: c-#{$i};
+    border-radius: 0.625rem;
+    padding: 1.5625rem;
+    display: grid;
+    gap: 0.625rem;
+  }
+  $i: $i + 1;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  img {
+    width: 3.4375rem;
+    border-radius: 50%;
+    border: 0.125rem solid map-get($primary, White);
+  }
+}
+
+.opinion-1 {
+  font-size: 1.1875rem;
+  font-weight: 600;
+}
+.opinion-2 {
+  font-size: 0.9063rem;
+}
+.text__name {
+  font-weight: 600;
+}
+
+.card-1,
+.card-2,
+.card-4 {
+  .opinion-1,
+  .text__name {
+    color: map-get($primary, White);
+  }
+
+  color: $Light-gray;
+}
+
+.card-1 {
+  background-image: url("../images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: 80% 10%;
+}
+
+//  Media queries are here
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 1.15vw;
+  }
+}
+@media (max-width: 900px) {
+  .container {
+    height: inherit;
+    grid-template-areas:
+      "c-1"
+      "c-1"
+      "c-1"
+      "c-2"
+      "c-3"
+      "c-4"
+      "c-4"
+      "c-4"
+      "c-5";
+  }
+}
+
+@media (max-width: 425px) {
+}
