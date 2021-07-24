@@ -22,7 +22,7 @@ html {
   margin: 1rem 6%;
   display: -ms-grid;
   display: grid;
-  gap: 2.5rem;
+  gap: 1.875rem;
 }
 
 .logo img {
@@ -34,8 +34,8 @@ html {
   display: -ms-grid;
   display: grid;
   gap: 1.875rem;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: 0.55fr 0.45fr;
+      grid-template-columns: 0.55fr 0.45fr;
 }
 
 .main__image {
@@ -51,13 +51,13 @@ html {
 .main__text {
   display: -ms-grid;
   display: grid;
-  gap: 0.9375rem;
+  gap: 1.25rem;
   -ms-grid-row-align: center;
       align-self: center;
 }
 
 .main__text-1 {
-  font-size: 1.875rem;
+  font-size: 2rem;
   font-weight: 600;
 }
 
@@ -143,6 +143,7 @@ html {
     width: 15.625rem;
   }
   .footer {
+    margin-top: 1rem;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;

@@ -34,7 +34,7 @@ html {
 
 .container {
   margin: 1rem 6%;
-  @include gap(2.5rem);
+  @include gap(1.875rem);
 }
 
 // Logo styles here
@@ -50,7 +50,7 @@ html {
 
 .main {
   @include gap(1.875rem);
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 0.55fr 0.45fr;
   &__image {
     align-self: center;
 
@@ -59,10 +59,10 @@ html {
     }
   }
   &__text {
-    @include gap(0.9375rem);
+    @include gap(1.25rem);
     align-self: center;
     &-1 {
-      font-size: 1.875rem;
+      font-size: 2rem;
       font-weight: 600;
     }
     &-2 {
@@ -141,6 +141,7 @@ html {
     }
   }
   .footer {
+    margin-top: 1rem;
     justify-content: center;
   }
 }
