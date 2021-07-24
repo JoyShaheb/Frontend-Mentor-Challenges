@@ -1,0 +1,120 @@
+// ### Fonts
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap");
+
+// ### Primary Colors
+
+$primary: (
+  Cyan: hsl(180, 62%, 55%),
+  Red: hsl(0, 78%, 62%),
+  Orange: hsl(34, 97%, 64%),
+  Blue: hsl(212, 86%, 64%),
+);
+
+// ### Neutral Colors
+
+$Very-Dark-Blue: hsl(234, 12%, 34%);
+$Grayish-Blue: hsl(229, 6%, 66%);
+$Very-Light-Gray: hsl(0, 0%, 98%);
+
+html {
+  font-size: 15px;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  body {
+    font-family: "Poppins", sans-serif;
+    background-color: $Very-Light-Gray;
+    color: $Grayish-Blue;
+    font-weight: 400;
+    margin: 2.5rem 0;
+  }
+}
+
+.container {
+  margin: 0 10%;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.text {
+  text-align: center;
+  margin: 0 25%;
+  &-1 {
+    color: $Very-Dark-Blue;
+    font-size: 1.5rem;
+  }
+  &-2 {
+    @extend .text-1;
+    font-weight: 600;
+  }
+  &-3 {
+    margin-top: 0.9375rem;
+  }
+}
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.875rem;
+  grid-template-areas:
+    ". .       c-2 c-2    . ."
+    "c-1 c-1   c-2 c-2    c-4 c-4"
+    "c-1 c-1   c-3 c-3    c-4 c-4"
+    ". .       c-3 c-3    . .";
+}
+
+[class^="card-"] {
+  padding: 6%;
+  display: grid;
+  gap: 0.625rem;
+  background-color: white;
+  box-shadow: 0rem 0.625rem 0.75rem 0.1875rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.3125rem;
+  .image {
+    justify-self: flex-end;
+    margin-top: 0.9375rem;
+  }
+  .title {
+    @extend .text-2;
+    font-size: 1.25rem;
+  }
+}
+
+$i: 1;
+@each $key, $value in $primary {
+  .card-#{$i} {
+    border-top: 0.4375rem solid $value;
+    grid-area: c-#{$i};
+  }
+  $i: $i + 1;
+}
+
+//  Media queries are here
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 1.25vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .text {
+    margin: inherit;
+  }
+  .card {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+      "c-1"
+      "c-2"
+      "c-3"
+      "c-4";
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    margin: 0 5%;
+  }
+}
