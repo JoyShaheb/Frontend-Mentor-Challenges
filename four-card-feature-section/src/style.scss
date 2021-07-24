@@ -43,7 +43,8 @@ html {
   margin: 0 25%;
   &-1 {
     color: $Very-Dark-Blue;
-    font-size: 1.5rem;
+    font-size: 1.625rem;
+    font-weight: 200;
   }
   &-2 {
     @extend .text-1;

@@ -32,7 +32,8 @@ html {
 
 .text-1, .text-2, [class^="card-"] .title {
   color: #4c4e61;
-  font-size: 1.5rem;
+  font-size: 1.625rem;
+  font-weight: 200;
 }
 
 .text-2, [class^="card-"] .title {
