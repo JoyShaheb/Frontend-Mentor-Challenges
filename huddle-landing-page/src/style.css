@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+html {
+  font-size: 16px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* body {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  background: url("../images/bg-desktop.svg") no-repeat;
+  background-size: cover;
+  background-color: #674baf;
+}
+
+.container {
+  margin: 1rem 6%;
+  display: -ms-grid;
+  display: grid;
+  gap: 2.5rem;
+}
+
+.logo img {
+  cursor: pointer;
+  width: 20rem;
+}
+
+.main {
+  display: -ms-grid;
+  display: grid;
+  gap: 1.875rem;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.main__image {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.main__image img {
+  width: 100%;
+}
+
+.main__text {
+  display: -ms-grid;
+  display: grid;
+  gap: 0.9375rem;
+  -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.main__text-1 {
+  font-size: 1.875rem;
+  font-weight: 600;
+}
+
+.main__text-2 {
+  opacity: 0.8;
+}
+
+.main__text-btn {
+  color: #674baf;
+  background-color: #fff;
+  justify-self: flex-start;
+  padding: 0.625rem 3.125rem;
+  border-radius: 1.875rem;
+  -webkit-box-shadow: 0 0.5rem 0.5rem 0.3125rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.5rem 0.5rem 0.3125rem rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+
+.main__text-btn:hover {
+  background-color: #e882e8;
+  color: inherit;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.25rem;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.footer .fab {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  width: 0.625rem;
+  height: 0.625rem;
+  border: 0.125rem solid white;
+  border-radius: 100%;
+  padding: 1.25rem;
+  cursor: pointer;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+
+.footer .fab:hover {
+  color: #e882e8;
+  border: 0.125rem solid #e882e8;
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 1.25vw;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 650px) {
+  body {
+    background: url("../images/bg-mobile.svg") no-repeat;
+    background-size: contain;
+    background-color: #674baf;
+  }
+  .main {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .main__text-btn {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .logo img {
+    width: 15.625rem;
+  }
+  .footer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+/*# sourceMappingURL=style.css.map */

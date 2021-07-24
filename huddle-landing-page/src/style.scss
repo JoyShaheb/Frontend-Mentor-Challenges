@@ -1,0 +1,146 @@
+// ### Fonts
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+// ### Primary Colors
+
+$Violet: hsl(257, 40%, 49%);
+$Soft-Magenta: hsl(300, 69%, 71%);
+
+html {
+  font-size: 16px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  body {
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    background: url("../images/bg-desktop.svg") no-repeat;
+    background-size: cover;
+    background-color: $Violet;
+  }
+}
+
+// Mixin to save time
+
+@mixin gap($gap) {
+  display: grid;
+  gap: $gap;
+}
+
+// Solution here
+
+.container {
+  margin: 1rem 6%;
+  @include gap(2.5rem);
+}
+
+// Logo styles here
+
+.logo {
+  img {
+    cursor: pointer;
+    width: 20rem;
+  }
+}
+
+// main class styles here
+
+.main {
+  @include gap(1.875rem);
+  grid-template-columns: repeat(2, 1fr);
+  &__image {
+    align-self: center;
+
+    img {
+      width: 100%;
+    }
+  }
+  &__text {
+    @include gap(0.9375rem);
+    align-self: center;
+    &-1 {
+      font-size: 1.875rem;
+      font-weight: 600;
+    }
+    &-2 {
+      opacity: 0.8;
+    }
+    &-btn {
+      color: $Violet;
+      background-color: #fff;
+      justify-self: flex-start;
+      padding: 0.625rem 3.125rem;
+      border-radius: 1.875rem;
+      box-shadow: 0 0.5rem 0.5rem 0.3125rem rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: all 0.15s ease;
+      &:hover {
+        background-color: $Soft-Magenta;
+        color: inherit;
+      }
+    }
+  }
+}
+
+// Footer icons styles here
+
+.footer {
+  display: flex;
+  gap: 1.25rem;
+  justify-content: flex-end;
+  .fab {
+    display: grid;
+    place-content: center;
+    width: 0.625rem;
+    height: 0.625rem;
+    border: 0.125rem solid white;
+    border-radius: 100%;
+    padding: 1.25rem;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    &:hover {
+      color: $Soft-Magenta;
+      border: 0.125rem solid $Soft-Magenta;
+    }
+  }
+}
+
+//  media Queries here
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 1.25vw;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 650px) {
+  body {
+    background: url("../images/bg-mobile.svg") no-repeat;
+    background-size: contain;
+    background-color: $Violet;
+  }
+  .main {
+    grid-template-columns: 1fr;
+    text-align: center;
+    &__text-btn {
+      justify-self: center;
+    }
+  }
+  .logo {
+    img {
+      width: 15.625rem;
+    }
+  }
+  .footer {
+    justify-content: center;
+  }
+}
