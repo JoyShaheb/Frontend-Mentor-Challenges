@@ -169,9 +169,9 @@ html{
 **/
 
 .card-1, .card-4 {
-  @include flexbox(column, center ,null);
+  @include flexbox(column, center, null);
   gap: 1.875rem;
-  height: 60vh;
+  height: 70vh;
   padding: 10%;
   .title{
     font-family: 'Fraunces', serif;
