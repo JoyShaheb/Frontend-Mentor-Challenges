@@ -1,0 +1,14 @@
+{
+  "name": "loopstudios-landing-page-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the Loopstudios landing page coding challenge](./design/desktop-preview.jpg)",
+  "main": "main.js",
+  "scripts": {
+    "compile:sass": "sass --watch src/scss:src/css"
+  },
+  "author": "Joy Shaheb",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.39.2"
+  }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./src/bootstrap.css" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <title>Frontend Mentor | Project tracking intro component</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link" href="#">Features</a>
+              <a class="nav-link" href="#">Pricing</a>
+              <a
+                class="nav-link disabled"
+                href="#"
+                tabindex="-1"
+                aria-disabled="true"
+                >Disabled</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="navbar mb-2 navbar-light bg-light">
+        <a class="navbar__logo navbar-brand" href="#">
+          <img src="./images/logo.svg" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar__menu row">
+          <div class="navbar__menu-1 col">Product</div>
+          <div class="navbar__menu-2 col">Features</div>
+          <div class="navbar__menu-3 col">Pricing</div>
+          <div class="navbar__menu-4 col">Login</div>
+        </div>
+      </div>
+      <div class="content row vh-100">
+        <div
+          class="
+            content__text
+            m-0
+            p-0
+            pt-5 pt-md-0
+            col-12 col-md-5
+            order-1 order-md-0
+            align-content-start align-content-md-center
+          "
+        >
+          <div class="content__text-1 fs-6">
+            <span class="badge rounded-pill bg-dark p-2">New</span>
+
+            Monograph Dashboard
+          </div>
+          <div class="content__text-title fs-1">
+            Powerful insights <br />
+            into your team
+          </div>
+          <div class="content__text-2 fs-6">
+            Project planning and time tracking <br />
+            for agile teams
+          </div>
+          <div class="content__text-btn">
+            <span class="btn me-3">Schedule a demo</span>
+            to see a live preview
+          </div>
+        </div>
+        <div class="content__image col-12 col-md-7 order-0 order-md-1"></div>
+      </div>
+    </div>
+  </body>
+  <script src="./src/bootstrap.min.js"></script>
+</html>

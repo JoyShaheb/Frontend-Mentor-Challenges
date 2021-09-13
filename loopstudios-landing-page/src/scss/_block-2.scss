@@ -1,0 +1,31 @@
+/**
+* ! Style rules of .block-2
+**/
+
+.block-2{
+  padding: 0 $desktop-padding;
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: $Dark-Gray;
+  .image{
+    background-image: url('../../images/desktop/image-interactive.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+  }
+  .card{
+    text-transform: uppercase;
+    align-self: flex-end;
+    padding: 40px;
+    background-color: #fff;
+    transform: translate(-15%);
+    .title{
+      color: #000;
+      font-size: 50px;
+      padding-bottom: 20px;
+    }
+    .info{}
+  }
+}

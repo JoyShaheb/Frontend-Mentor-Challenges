@@ -1,0 +1,401 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+/**
+* ! Changing default styles of browser
+**/
+html {
+  font-size: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+/**
+* ! Style rules of .block-1
+**/
+.block-1 {
+  display: grid;
+  padding: 20px 50px;
+  height: 70vh;
+  color: white;
+  background-image: url("../../images/desktop/image-hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (max-width: 950px) {
+  .block-1 {
+    background-image: url("../../images/mobile/image-hero.jpg");
+  }
+}
+.block-1 .title {
+  font-size: 55px;
+  padding: 35px 70px;
+  justify-self: start;
+  align-self: start;
+  text-transform: uppercase;
+  border: 2px solid white;
+}
+
+/**
+* ! Style rules of navbar
+**/
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.navbar__btn {
+  display: none;
+}
+.navbar__btn i {
+  cursor: pointer;
+}
+.navbar__menu {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  font-size: 22px;
+}
+.navbar__menu [class^=navbar__menu-] {
+  cursor: pointer;
+}
+.navbar__menu [class^=navbar__menu-]::after {
+  content: "";
+  display: block;
+  width: 0%;
+  background-color: #fff;
+  height: 3px;
+  border-radius: 5px;
+  transition: all 0.15s ease;
+}
+.navbar__menu [class^=navbar__menu-]:hover::after {
+  width: 100%;
+}
+
+.hide {
+  display: none !important;
+}
+
+.slide {
+  left: 0% !important;
+}
+
+/**
+* ! Style rules of .block-2
+**/
+.block-2 {
+  padding: 0 50px;
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: #8c8c8c;
+}
+.block-2 .image {
+  background-image: url("../../images/desktop/image-interactive.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+}
+.block-2 .card {
+  text-transform: uppercase;
+  align-self: flex-end;
+  padding: 40px;
+  background-color: #fff;
+  transform: translate(-15%);
+}
+.block-2 .card .title {
+  color: #000;
+  font-size: 50px;
+  padding-bottom: 20px;
+}
+/**
+* ! Style rules of .block-3
+**/
+.block-3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  margin: 20px 0;
+  text-transform: uppercase;
+}
+.block-3 .title {
+  font-size: 30px;
+}
+.block-3 .btn {
+  border: 2px solid black;
+  padding: 10px 35px;
+  transition: all 0.15s ease;
+}
+.block-3 .btn:hover {
+  background-color: #000;
+  color: white;
+}
+
+.block-4 {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  display: none;
+}
+@media (max-width: 950px) {
+  .block-4 {
+    display: flex;
+  }
+}
+.block-4 .btn {
+  border: 2px solid black;
+  padding: 10px 35px;
+  transition: all 0.15s ease;
+}
+.block-4 .btn:hover {
+  background-color: #000;
+  color: white;
+}
+
+/**
+* ! Style rules of .gallery
+**/
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  padding: 0 50px;
+  margin: 20px 0;
+}
+@media (max-width: 950px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+.gallery [class^=image-] {
+  cursor: pointer;
+  display: grid;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+  background-blend-mode: overlay;
+  transition: all 0.15s ease;
+}
+.gallery [class^=image-]:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.gallery [class^=image-]:hover p {
+  color: black;
+}
+.gallery [class^=image-] p {
+  align-self: flex-end;
+  color: white;
+  font-size: 30px;
+  padding: 0 0 20px 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.gallery .image-1 {
+  background-image: url("../../images/desktop/image-deep-earth.jpg");
+}
+@media (max-width: 950px) {
+  .gallery .image-1 {
+    background-image: url("../../images/mobile/image-deep-earth.jpg");
+    background-position: center;
+  }
+}
+.gallery .image-2 {
+  background-image: url("../../images/desktop/image-night-arcade.jpg");
+}
+@media (max-width: 950px) {
+  .gallery .image-2 {
+    background-image: url("../../images/mobile/image-night-arcade.jpg");
+    background-position: center;
+  }
+}
+.gallery .image-3 {
+  background-image: url("../../images/desktop/image-soccer-team.jpg");
+}
+@media (max-width: 950px) {
+  .gallery .image-3 {
+    background-image: url("../../images/mobile/image-soccer-team.jpg");
+    background-position: center;
+  }
+}
+.gallery .image-4 {
+  background-image: url("../../images/desktop/image-grid.jpg");
+}
+@media (max-width: 950px) {
+  .gallery .image-4 {
+    background-image: url("../../images/mobile/image-grid.jpg");
+    background-position: center;
+  }
+}
+.gallery .image-5 {
+  background-image: url("../../images/desktop/image-from-above.jpg");
+}
+@media (max-width: 950px) {
+  .gallery .image-5 {
+    background-image: url("../../images/mobile/image-from-above.jpg");
+    background-position: center;
+  }
+}
+.gallery .image-6 {
+  background-image: url("../../images/desktop/image-pocket-borealis.jpg");
+}
+@media (max-width: 950px) {
+  .gallery .image-6 {
+    background-image: url("../../images/mobile/image-pocket-borealis.jpg");
+    background-position: center;
+  }
+}
+.gallery .image-7 {
+  background-image: url("../../images/desktop/image-curiosity.jpg");
+}
+@media (max-width: 950px) {
+  .gallery .image-7 {
+    background-image: url("../../images/mobile/image-curiosity.jpg");
+    background-position: center;
+  }
+}
+.gallery .image-8 {
+  background-image: url("../../images/desktop/image-fisheye.jpg");
+}
+@media (max-width: 950px) {
+  .gallery .image-8 {
+    background-image: url("../../images/mobile/image-fisheye.jpg");
+    background-position: center;
+  }
+}
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px 50px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.footer img {
+  cursor: pointer;
+}
+.footer .copyright {
+  justify-self: flex-end;
+}
+.footer .social {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+.footer .menu {
+  display: flex;
+  gap: 20px;
+}
+.footer .menu div {
+  cursor: pointer;
+}
+
+@media (max-width: 950px) {
+  .container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .block-1 {
+    padding: 20px 20px;
+  }
+  .block-1 .title {
+    font-size: 35px;
+    padding: 35px 20px;
+    justify-self: start;
+    align-self: start;
+    text-transform: uppercase;
+    border: 2px solid white;
+  }
+  .block-1 .navbar__menu {
+    overflow: hidden;
+    z-index: 0;
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    padding: 0 50px;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 40px;
+    transition: all 0.5s ease;
+  }
+  .block-1 .navbar__logo {
+    z-index: 1;
+  }
+  .block-1 .navbar__btn {
+    display: block;
+    z-index: 1;
+    font-size: 20px;
+  }
+
+  .block-2 {
+    padding: 0 20px;
+    grid-template-columns: 1fr;
+  }
+  .block-2 .image {
+    background-image: url("../../images/mobile/image-interactive.jpg");
+  }
+  .block-2 .card {
+    padding: 20px 10px;
+    text-align: center;
+    transform: translate(0);
+  }
+  .block-2 .card .title {
+    font-size: 30px;
+  }
+
+  .block-3 {
+    padding: 0 20px;
+    justify-content: center;
+  }
+  .block-3 .btn {
+    display: none;
+  }
+
+  .gallery {
+    padding: 0 20px;
+  }
+
+  .footer {
+    padding: 20px 20px;
+    grid-template-columns: 1fr;
+  }
+  .footer .logo {
+    text-align: center;
+    order: 0;
+  }
+  .footer .social {
+    order: 2;
+    justify-content: center;
+  }
+  .footer .menu {
+    order: 1;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .footer .copyright {
+    justify-self: center;
+    order: 3;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+html {
+  font-size: 20px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* body {
+  font-family: "Libre Franklin", sans-serif;
+  margin: 1.125rem 0;
+}
+
+.container {
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.logo img {
+  width: 4rem;
+  cursor: pointer;
+}
+
+.text__title {
+  font-size: 2rem;
+}
+
+.text__title .regular {
+  color: #969696;
+}
+
+.text__title .bold {
+  font-weight: 700;
+}
+
+.text__description {
+  font-size: 1.1rem;
+}
+
+.text__form {
+  margin: 1.25rem 0;
+  -webkit-column-gap: 1.8rem;
+          column-gap: 1.8rem;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: 0.1fr 0.1fr;
+      grid-template-columns: 0.1fr 0.1fr;
+}
+
+.text__form input[type="email"] {
+  border: 2px solid #cccccc;
+  padding: 0.5rem 1.25rem;
+  width: 30rem;
+  border-radius: 1.875rem;
+  outline: none;
+}
+
+.text__form ::-webkit-input-placeholder {
+  color: #c2c1c1;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.text__form :-ms-input-placeholder {
+  color: #c2c1c1;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.text__form ::-ms-input-placeholder {
+  color: #c2c1c1;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.text__form ::placeholder {
+  color: #c2c1c1;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.text__form .btn {
+  border: none;
+  white-space: nowrap;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  background-color: #4f7df3;
+  color: #fff;
+  border-radius: 1.875rem;
+  padding: 0.5rem 3.125rem;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+  -webkit-box-shadow: 0.0625rem 0.1875rem 0.25rem 0.125rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0.0625rem 0.1875rem 0.25rem 0.125rem rgba(0, 0, 0, 0.3);
+}
+
+.text__form .btn:hover {
+  -webkit-filter: brightness(1.4);
+          filter: brightness(1.4);
+  -webkit-box-shadow: 0.0625rem 0.1875rem 0.5rem 0.1875rem rgba(0, 0, 0, 0);
+          box-shadow: 0.0625rem 0.1875rem 0.5rem 0.1875rem rgba(0, 0, 0, 0);
+}
+
+/*
+* important info !
+? should i use this or that? 
+! siufdsiofjdsij
+TODO : dslsdflsdflefdd
+*/
+.image img {
+  width: 32rem;
+}
+
+.footer {
+  display: -ms-grid;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.footer__social {
+  color: #4f7df3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1.875rem;
+}
+
+.footer__social .fab {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  border: 0.125rem solid #c2d3ff;
+  border-radius: 100%;
+  padding: 1rem;
+  height: 0.0625rem;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+
+.footer__social .fab:hover {
+  background-color: #4f7df3;
+  color: white;
+}
+
+.footer__copyright {
+  font-size: 1rem;
+  color: #969696;
+}
+
+@media (min-width: 1440px) {
+  html {
+    font-size: 1.45vw;
+  }
+}
+/*# sourceMappingURL=style.css.map */

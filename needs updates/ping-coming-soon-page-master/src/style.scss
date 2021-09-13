@@ -1,0 +1,26 @@
+// ## Fonts
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+
+// ### Primary Colors
+
+$Blue: hsl(223, 87%, 63%);
+$hover-blue: hsl(223, 87%, 63%);
+// ### Secondary
+
+$Pale-Blue: hsl(223, 100%, 88%);
+$Light-Red: hsl(354, 100%, 66%);
+
+// ### Neutral
+
+$Gray: hsl(0, 0%, 59%);
+$Very-Dark-Blue: hsl(209, 33%, 12%);
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  body {
+    font-family: "Libre Franklin", sans-serif;
+    margin: 1.125rem 0;
+  }
+}

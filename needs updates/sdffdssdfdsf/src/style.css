@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;900&display=swap");
+/**
+* ! Root element + resetting default styles
+**/
+html {
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* body {
+  font-family: "Red Hat Display", sans-serif;
+  color: #7280a7;
+  font-weight: 500;
+  background-image: url("../images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #e0e8ff;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+/**
+* ! .container styles are here 
+**/
+.container {
+  border: 2px solid red;
+  background-color: white;
+  height: 80vh;
+  min-width: 450px;
+  border-radius: 12px;
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[10];
+      grid-template-rows: repeat(10, 1fr);
+}
+
+/**
+* ! .image styles are here 
+**/
+.image {
+  background-color: #3829e0;
+  grid-row: span 4;
+  background-image: url(../images/illustration-hero.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+/**
+* ! .content styles are here 
+**/
+.content {
+  grid-row: span 6;
+  padding: 30px;
+}
+
+.content__text-title {
+  font-weight: 900;
+  font-size: 1.75rem;
+  color: #1f2f56;
+  margin-bottom: 10px;
+}
+
+.content__text-info {
+  margin-bottom: 20px;
+}
+
+/**
+* ! .content__plan styles are here 
+**/
+.content__plan {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.5fr 0.5fr 1fr;
+      grid-template-columns: 0.5fr 0.5fr 1fr;
+  padding: 10px 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f5f7ff;
+}
+
+.content__plan-change {
+  justify-self: flex-end;
+}
+
+/**
+* ! Media Queries are here 
+* ? 1200px || 900px || 500px
+**/
+@media (min-width: 1200px) {
+  html {
+    font-size: 16px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

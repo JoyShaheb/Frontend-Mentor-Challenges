@@ -1,0 +1,19 @@
+.block-4{
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  display: none;
+  @media (max-width: $mobile){
+    display: flex;
+  }
+  .btn{
+    border: 2px solid black;
+    padding: 10px 35px;
+    transition: all 0.15s ease;
+    &:hover{
+      background-color: #000;
+      color: white;
+    }
+  }
+}

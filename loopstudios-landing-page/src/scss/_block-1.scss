@@ -1,0 +1,75 @@
+/**
+* ! Style rules of .block-1
+**/
+
+.block-1{
+  display: grid;
+  padding: 20px $desktop-padding;
+  height: 70vh;
+  color: white;
+  background-image: url('../../images/desktop/image-hero.jpg');
+  @media (max-width:$mobile) {
+    background-image: url('../../images/mobile/image-hero.jpg');
+  }
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  .title{
+    font-size: 55px;
+    padding: 35px 70px;
+    justify-self: start;
+    align-self: start;
+    text-transform: uppercase;
+    border: 2px solid white;
+  }
+}
+
+/**
+* ! Style rules of navbar
+**/
+
+.navbar{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+  &__btn{
+    display: none;
+    i{
+      cursor: pointer;
+    }
+  }
+  &__menu{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    font-size: 22px;
+    [class ^="navbar__menu-"]{
+      cursor: pointer;
+      &::after{
+        content: '';
+        display: block;
+        width: 0%;
+        background-color: #fff;
+        height: 3px;
+        border-radius: 5px;
+        transition: all 0.15s ease;
+
+      }
+      &:hover::after{
+        width: 100%;
+
+      }
+    }
+  }
+}
+
+.hide{
+  display: none !important;
+}
+
+.slide{
+  left: 0% !important;
+}

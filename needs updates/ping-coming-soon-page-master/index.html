@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="src/bootstrap.css" />
+    <title>Frontend Mentor | Ping coming soon page</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <img src="./images/logo.svg" alt="" />
+      </div>
+      <div class="text">
+        <div class="text__title">
+          <span class="regular">We are launching</span>
+          <span class="bold">soon!</span>
+        </div>
+        <div class="text__description">Subscribe and get notified</div>
+
+        <form class="needs-validation text__form" novalidate>
+          <input
+            type="email"
+            name="email"
+            placeholder="Your email ID.."
+            class="email white form-control"
+            id="email"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+            required
+          />
+
+          <button
+            type="submit"
+            class="btn btn-danger text-uppercase sbmt-btn"
+            value="validate"
+          >
+            Notify Me
+          </button>
+          <div class="invalid-feedback feedback-pos">
+            Please input valid email ID
+          </div>
+        </form>
+      </div>
+
+      <div class="image">
+        <img src="./images/illustration-dashboard.png" alt="" />
+      </div>
+      <div class="footer">
+        <div class="footer__social">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
+        </div>
+        <div class="footer__copyright">
+          &copy; Copyright Ping. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

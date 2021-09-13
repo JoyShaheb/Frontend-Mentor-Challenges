@@ -1,0 +1,27 @@
+/**
+* ! Style rules of .block-3
+**/
+
+
+.block-3{
+  // border: 2px solid red;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 $desktop-padding;
+  margin: 20px 0;
+  text-transform: uppercase;
+  .title{
+    font-size: 30px;
+  }
+  .btn{
+    border: 2px solid black;
+    padding: 10px 35px;
+    transition: all 0.15s ease;
+    &:hover{
+      background-color: #000;
+      color: white;
+    }
+  }
+}
