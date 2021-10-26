@@ -1,0 +1,13 @@
+@use 'variables' as *;
+
+.section_3{
+  // background: linear-gradient(90deg, $Very-dark-gray-blue 0%, $Very-dark-desaturated-blue 100%);
+  height: 55vh;
+  background-image: url('../public//images/bg-pattern-circles.svg'), linear-gradient(90deg, $Very-dark-gray-blue 0%, $Very-dark-desaturated-blue 100%);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  border-radius: 0 5rem 0 5rem;
+  @media (max-width:991px){
+    min-height: 100vh;
+  }
+}

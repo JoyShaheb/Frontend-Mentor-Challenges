@@ -1,0 +1,25 @@
+@use 'variables' as *;
+
+.footer{
+  background-color: $Very-dark-black-blue;
+  border-radius: 0 5rem 0 0;
+}
+
+.links{
+  // d-flex flex-column align-items-center
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  div{
+    display: grid;
+    gap: 10px;
+  }
+  a{
+    cursor: pointer;
+    justify-self: start;
+
+    &:hover{
+      box-shadow: 0 2px 0 rgba($color: #fff, $alpha: 1.0);
+    }
+  }
+}

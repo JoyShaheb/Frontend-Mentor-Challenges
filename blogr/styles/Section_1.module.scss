@@ -1,0 +1,43 @@
+@use 'variables' as *;
+
+.section_1{
+  background-image: url('../public/images/bg-pattern-intro.svg'), linear-gradient(90deg, $Very-light-red 0%, $Light-red 100%);
+  background-repeat: no-repeat;
+  background-size: 140%;
+  background-position: center;
+  min-height: 70vh;
+  border-radius:  0 0 0 5rem;
+  .container{
+    display: grid;
+    place-content: center;
+    height: 50vh;
+  }
+}
+
+.btn{
+  &_1{
+    
+    color: $Light-red ;
+    font-weight: 700;
+    background-color: rgba($color: #fff, $alpha: 1.0);
+    &:hover{
+      color: white;
+      background-color: rgba($color: #fff, $alpha: 0.25);
+    }
+  }
+  &_2{
+  border: 2px solid white;
+  color: white;
+    &:hover{
+      background-color: #fff;
+      color: $Light-red ;
+    }
+  }
+}
+
+.fontSize{
+  font-size: 4rem;
+  @media(max-width:768px){
+    font-size: 2rem;
+  }
+}

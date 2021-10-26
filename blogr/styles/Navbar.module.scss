@@ -1,0 +1,33 @@
+@use "variables" as *;
+
+.signUp {
+  color: $Light-red;
+  font-weight: 700;
+  background-color: rgba($color: #fff, $alpha: 1);
+  &:hover {
+    color: white;
+    background-color: rgba($color: #fff, $alpha: 0.25);
+  }
+  @media (max-width: 991px) {
+    background: linear-gradient(90deg, $Very-light-red 0%, $Light-red 100%);
+    color: white;
+  }
+}
+
+@media (max-width: 991px) {
+  .window {
+    background-color: #fff;
+    border-radius: 0.75rem;
+  }
+  .dropdown {
+    background-color: hsl(240, 2%, 80%);
+    margin: 0 1.875rem;
+  }
+}
+
+.navLinks {
+  color: white !important;
+  @media (max-width: 991px) {
+    color: black !important;
+  }
+}
