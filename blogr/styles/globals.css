@@ -1,0 +1,29 @@
+@use 'variables' as *;
+.ubuntu {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.overpass {
+  font-family: 'Overpass', sans-serif;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Overpass', sans-serif;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+button[aria-expanded="true"] > .open {
+  display: none;
+}
+
+button[aria-expanded="false"] > .close {
+  display: none;
+}
+/*# sourceMappingURL=globals.css.map */
