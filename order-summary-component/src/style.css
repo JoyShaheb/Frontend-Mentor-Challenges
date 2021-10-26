@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+body {
+  font-family: "Red Hat Display", sans-serif;
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  background: url("../images/pattern-background-desktop.svg"), #e0e8ff;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.card {
+  min-height: 80vh;
+  max-width: 400px;
+  border-radius: 12px;
+}
+
+img {
+  border-radius: 12px 12px 0 0 !important;
+}
+
+.card-text {
+  color: #7280a7;
+}
+
+.change {
+  color: #3829e0 !important;
+  text-decoration: underline;
+  font-size: 13px !important;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.change:hover {
+  text-decoration: none;
+}
+
+.price {
+  color: #7280a7;
+}
+
+.plan {
+  background-color: #f5f7ff;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.btn {
+  width: 100%;
+}
+
+.btn-1 {
+  background-color: #3829e0;
+  color: white;
+  padding: 10px 0;
+  border-radius: 0.5rem;
+}
+
+.btn-1:hover {
+  background-color: rgba(56, 41, 224, 0.5);
+  color: white;
+}
+
+.btn-2 {
+  color: #7280a7;
+}
+/*# sourceMappingURL=style.css.map */

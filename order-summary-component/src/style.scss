@@ -1,0 +1,74 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+// ### Primary Colors
+
+$Pale-blue: hsl(225, 100%, 94%);
+$Bright-blue: hsl(245, 75%, 52%);
+
+// ### Neutral Colors
+
+$Very-pale-blue: hsl(225, 100%, 98%);
+$Desaturated-blue: hsl(224, 23%, 55%);
+$Dark-blue: hsl(223, 47%, 23%);
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  background: url("../images/pattern-background-desktop.svg"), $Pale-blue;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.card {
+  min-height: 80vh;
+  max-width: 400px;
+  // border: 2px solid red;
+  border-radius: 12px;
+}
+
+img {
+  border-radius: 12px 12px 0 0 !important;
+}
+
+.card-text {
+  color: $Desaturated-blue;
+}
+
+.change {
+  color: $Bright-blue !important;
+  text-decoration: underline;
+  font-size: 13px !important;
+  font-weight: 700;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.price {
+  color: $Desaturated-blue;
+}
+
+.plan {
+  background-color: $Very-pale-blue;
+  padding: 10px;
+  border-radius: 12px;
+}
+.btn {
+  width: 100%;
+  &-1 {
+    background-color: $Bright-blue;
+    color: white;
+    padding: 10px 0;
+    border-radius: 0.5rem;
+    &:hover {
+      background-color: rgba($color: $Bright-blue, $alpha: 0.5);
+      color: white;
+    }
+  }
+  &-2 {
+    color: $Desaturated-blue;
+  }
+}
